@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <div class="home__content">
-      <canvas ref="canvas" class="canvas" width="1920" height="1080"></canvas>
       <div class="rectangle">
         <div class="square red" @click="createNote('#FEB1B1')"></div>
         <div class="square blue" @click="createNote('#B1D0FE')"></div>
@@ -141,18 +140,12 @@ export default {
     box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.09);
     overflow: hidden;
 
-    .canvas {
-      border: 1px solid black;
-      width: 100%;
-      height: 100%;
-    }
-
     // Сетка из точек
     &::before {
       content: "";
       display: grid;
       grid-template-columns: repeat(50, 1fr);
-      grid-template-rows: repeat(60, 1fr);
+      grid-template-rows: repeat(200, 1fr);
       gap: 16px;
       pointer-events: none;
       z-index: 0;
